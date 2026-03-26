@@ -136,136 +136,33 @@ Required cookies:
 
 This project is a modified version of [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli) by [jackwener](https://github.com/jackwener), adapted for RedNote (小红书海外版).
 
-## License
+### 🙏 Special Thanks to [jackwener](https://github.com/jackwener)
 
-Apache License 2.0
+This project would not be possible without the excellent work on [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli). We are deeply grateful for:
+
+- **Reverse Engineering Efforts**: The comprehensive API reverse engineering work
+- **Clean Architecture**: Well-structured, modular codebase
+- **Anti-Detection Features**: Sophisticated browser fingerprint simulation
+- **Active Maintenance**: Continuous updates and improvements
+
+If you find this tool useful, please also consider starring the [original project](https://github.com/jackwener/xiaohongshu-cli) ⭐
 
 ---
-
-# 中文
-
-## 什么是 RedNote？
-
-**RedNote**（小红书海外版）是小红书的国际版本，专为海外用户设计的生活方式分享平台。
-
-- **网站**: https://www.rednote.com
-- **目标用户**: 中国大陆以外的国际用户
-- **内容**: 生活方式、时尚、美食、旅行、AIGC 等
-
-## 功能特性
-
-- 🔐 **认证** — 自动提取浏览器 Cookie、二维码登录、状态检查
-- 🔍 **搜索** — 关键词搜索笔记、用户搜索、话题搜索
-- 📖 **阅读** — 笔记详情、评论、用户主页
-- 📰 **信息流** — 推荐流、热门分类
-- 👥 **社交** — 关注/取关、收藏
-- 👍 **互动** — 点赞、收藏、评论、回复
-- ✍️ **创作** — 发布图文笔记、话题标签
-- 🔔 **通知** — 未读数、@提及、点赞
-- 🛡️ **反检测** — 一致的浏览器指纹、高斯抖动
-- 📊 **结构化输出** — 支持 `--yaml` 和 `--json`
-
-## 安装
-
-```bash
-# 推荐: uv tool (快速、隔离)
-uv tool install rednote-cli
-
-# 或: pipx
-pipx install rednote-cli
-```
-
-从源码安装:
-
-```bash
-git clone https://github.com/loudsy-ai/rednote-cli.git
-cd rednote-cli
-uv tool install .
-```
-
-## 快速开始
-
-```bash
-# 登录（从浏览器提取 Cookie）
-rednote login
-
-# 检查状态
-rednote status
-
-# 搜索笔记
-rednote search "AIGC"
-
-# 发布笔记
-rednote post --title "我的第一篇笔记" --body "你好 RedNote!" --images ./photo.jpg
-
-# 查看信息流
-rednote feed
-```
-
-## 使用方法
-
-### 认证
-
-```bash
-rednote login                    # 从浏览器提取 Cookie
-rednote login --qrcode           # 二维码登录
-rednote status                   # 检查登录状态
-rednote whoami                   # 详细资料
-rednote logout                   # 清除保存的 Cookie
-```
-
-### 搜索与阅读
-
-```bash
-rednote search "关键词"          # 搜索笔记
-rednote search-user "用户名"     # 搜索用户
-rednote topics "话题"            # 搜索话题
-rednote read <笔记ID>            # 阅读笔记
-rednote comments <笔记ID>        # 查看评论
-rednote user <用户ID>            # 用户主页
-```
-
-### 创作者
-
-```bash
-rednote post --title "标题" --body "内容" --images ./图片.jpg --topic "AIGC"
-rednote my-notes                 # 我的笔记列表
-rednote delete <笔记ID>          # 删除笔记
-```
-
-### 互动
-
-```bash
-rednote like <笔记ID>            # 点赞
-rednote unlike <笔记ID>          # 取消点赞
-rednote favorite <笔记ID>        # 收藏
-rednote comment <笔记ID> "评论"  # 评论
-rednote follow <用户ID>          # 关注
-```
-
-## 配置
-
-配置目录: `~/.rednote-cli/`
-
-必需的 Cookie:
-- `a1` — 认证令牌
-- `webId` — 浏览器标识
-- `web_session` — 会话令牌（来自 localStorage）
-- `websectiga` — 安全令牌
-- `sec_poison_id` — 反机器人令牌
-
-## 与小红书 CLI 的区别
-
-| 功能 | RedNote CLI | 小红书 CLI |
-|------|-------------|------------|
-| 域名 | rednote.com | xiaohongshu.com |
-| API 主机 | webapi.rednote.com | edith.xiaohongshu.com |
-| 目标用户 | 国际用户 | 中国大陆用户 |
-| 上传主机 | ros-upload.xiaohongshu.com | ros-upload.xiaohongshu.com |
 
 ## 致谢
 
 本项目基于 [jackwener](https://github.com/jackwener) 的 [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli) 修改，适配 RedNote（小红书海外版）。
+
+### 🙏 特别感谢 [jackwener](https://github.com/jackwener)
+
+没有 [xiaohongshu-cli](https://github.com/jackwener/xiaohongshu-cli) 的优秀工作，就不会有这个项目。我们深深感谢：
+
+- **逆向工程努力**: 全面的 API 逆向工程工作
+- **清晰的架构**: 结构良好、模块化的代码库
+- **反检测功能**: 精细的浏览器指纹模拟
+- **积极维护**: 持续的更新和改进
+
+如果你觉得这个工具有用，也请给[原项目](https://github.com/jackwener/xiaohongshu-cli)点个 Star ⭐
 
 ## 许可证
 
